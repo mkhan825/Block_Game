@@ -38,6 +38,8 @@
   <ItemGroup>
      <Compile Include="Assets\wat.cs" />
      <Compile Include="Assets\main.cs" />
+     <Compile Include="Assets\button.cs" />
+     <Compile Include="Assets\cube.cs" />
     <Reference Include="UnityEngine">
         <HintPath>D:/Unity/2020.3.12f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>

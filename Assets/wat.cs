@@ -17,7 +17,7 @@ public class wat : MonoBehaviour
 
         // Instantiate(cube, new Vector3(0, 0, 0), Quaternion.identity);
         m_Rigidbody = cube.AddComponent<Rigidbody>();
-        m_Rigidbody.velocity = new Vector3(0, 10, 0);
+        m_Rigidbody.velocity = new Vector3(-10, 10, 0);
         cube.transform.position = new Vector3(0,0,0);
         cube_trans = cube.transform;
     }
@@ -34,22 +34,22 @@ public class wat : MonoBehaviour
             m_Rigidbody.velocity = new Vector3(m_Rigidbody.velocity[0], 10, m_Rigidbody.velocity[2]);
         }
 
-        // if (position[0] >= 15) {
-        //     m_Rigidbody.velocity = new Vector3(-10, m_Rigidbody.velocity[1], m_Rigidbody.velocity[2]);
-        // } else if (position[0] <= -15) {
-        //     m_Rigidbody.velocity = new Vector3(10, m_Rigidbody.velocity[1], m_Rigidbody.velocity[2]);
-        // }
+        if (position[0] >= 15) {
+            m_Rigidbody.velocity = new Vector3(-10, m_Rigidbody.velocity[1], m_Rigidbody.velocity[2]);
+        } else if (position[0] <= -15) {
+            m_Rigidbody.velocity = new Vector3(10, m_Rigidbody.velocity[1], m_Rigidbody.velocity[2]);
+        }
     }
 
-    public Button yourButton;
-    private void Awake()
-    {
-        Button buttonComponent = yourButton.GetComponent<Button>();;
-        yourButton.onClick.AddListener(OnButtonClicked);
-    }
+    // public Button yourButton;
+    // private void Awake()
+    // {
+    //     Button buttonComponent = yourButton.GetComponent<Button>();;
+    //     yourButton.onClick.AddListener(OnButtonClicked);
+    // }
 
-    private void OnButtonClicked()
-    {
-        Debug.Log("The button has clicked!");
-    }
+    // private void OnButtonClicked()
+    // {
+    //     Debug.Log("The button has clicked!");
+    // }
 }
